@@ -5,6 +5,7 @@ import CustomersComponent from "./components/Customers.component";
 import HeaderComponent from "./components/Header.component";
 import FooterComponent from "./components/Footer.component";
 import ProductsComponent from "./components/Products.components";
+import AddCostumerComponent from "./components/AddCostumer.component";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
                       <Route exact path="/" component={CustomersComponent}/>
                       <Route exact path="/customers" component={CustomersComponent}/>
                       <Route exact path="/products" component={ProductsComponent}/>
+                      <Route exact path="/add-customer" component={AddCostumerComponent}/>
+
 
                   </Switch>
                 </div>
