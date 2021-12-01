@@ -6,3 +6,4 @@ class ProductDaraService {
         return http.get("/products")
     }
 }
+export default new ProductDaraService();
