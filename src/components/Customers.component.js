@@ -35,6 +35,17 @@ class CustomersComponent extends Component {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Delete",
+        }).then((result)=>{
+            if(result.isConfirmed){
+                CustomerDataService.deleteCustomer(id)
+                    .then((response) => {
+                        console.log(response.data);
+                        window.location.reload();
+                    })
+                    .catch((e)=>{
+                        console.log(e);
+                    })
+            }
         })
     }
 
@@ -58,6 +69,7 @@ class CustomersComponent extends Component {
                 this.setState({customers: this.originData});
         }
     }
+
 
 
     render() {
