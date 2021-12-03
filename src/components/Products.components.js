@@ -13,13 +13,13 @@ class ProductsComponents extends  Component {
     componentDidMount() {
         ProductDataService.getProducts().then((res) =>{
             this.setState({products: res.data});
-        })
+        });
     }
 
     render() {
         return (
             <div>
-                <h2 className="text-center">Products List</h2>
+               <h2 className="text-center">Products List</h2>
                 <div className="row">
                     <table className="table table-striped table-bordered">
                         <thead>
@@ -31,12 +31,17 @@ class ProductsComponents extends  Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>12345</td>
-                                <td>Emri i produktit</td>
-                                <td>Pershkrimi i produktit</td>
-                                <td>123 EUR</td>
-                            </tr>
+                        {
+                            this.state.products.map(
+                                product =>
+                                    <tr key={product.id}>
+                                        <td>{product.id}</td>
+                                        <td>{product.label}</td>
+                                        <td>{product.description}</td>
+                                        <td>{product.price}</td>
+                                    </tr>
+                            )
+                        }
                         </tbody>
                     </table>
                 </div>
@@ -47,4 +52,4 @@ class ProductsComponents extends  Component {
 
     }
 }
-export default ProductsComponents
+export default ProductsComponents;
