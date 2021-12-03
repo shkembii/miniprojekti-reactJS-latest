@@ -18,13 +18,13 @@ function App() {
                       <Route exact path="/" component={CustomersComponent}/>
                       <Route exact path="/customers" component={CustomersComponent}/>
                       <Route exact path="/products" component={ProductsComponent}/>
-<<<<<<< HEAD
+
 
                       <Route exact path="/add-customer" component={AddCostumerComponent}/>
-=======
+
           <Route exact path="/add-customer" component={AddCostumerComponent}/>
 
->>>>>>> components
+
 
 
                   </Switch>
