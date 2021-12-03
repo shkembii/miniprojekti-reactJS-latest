@@ -1,9 +1,9 @@
 import http from "../http-common/http-common";
 
 
-class ProductDaraService {
+class ProductDataService {
     getProducts(){
         return http.get("/products")
     }
 }
-export default new ProductDaraService();
+export default new ProductDataService();
